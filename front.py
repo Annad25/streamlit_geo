@@ -230,7 +230,7 @@ if ready:
 st.subheader("📒 Session history")
 if st.session_state.records:
     df = pd.DataFrame([asdict(r) for r in st.session_state.records])
-    st.dataframe(df, use_container_width=True)
+    st.dataframe(df, width='stretch')
     if st.button("Clear session history"):
         st.session_state.records = []
         st.experimental_rerun()
